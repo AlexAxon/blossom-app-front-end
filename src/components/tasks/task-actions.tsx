@@ -65,9 +65,6 @@ const TaskActions = ({ categoryId }: TaskActionsProps) => {
   const onCreateTask = async () => {
     try {
       if (newTask.name.length.toString().trim().length > 0) {
-        /**
-         * mutation
-         */
         await trigger({
           ...newTask,
         })

@@ -9,7 +9,7 @@ import { Image } from "react-native"
 import Animated, { ZoomIn } from "react-native-reanimated"
 
 const BLOSSOM_IMAGE =
-  "https://res.cloudinary.com/dooxt2sgsdooxt2sgs23233/image/upload/v1676809769/youtube/2023/february/blossom/icon_fb36u3.png"
+  "https://ericsammons.com/wp-content/uploads/2021/02/todoist-logo.png"
 
 const WelcomeScreen = () => {
   const navigation = useNavigation<AuthScreenNavigationType<"Welcome">>()
@@ -46,11 +46,11 @@ const WelcomeScreen = () => {
             </Animated.View>
           </Box>
           <Text textAlign="center" variant="textXl" fontWeight="700">
-            Do you want to be more productive?
+            Welcome
           </Text>
           <Box my="3.5" mx="10">
             <Button
-              label="Start your journey"
+              label="Start"
               onPress={navigateToSignUpScreen}
             />
           </Box>
@@ -60,7 +60,7 @@ const WelcomeScreen = () => {
             fontWeight="700"
             color="gray5"
           >
-            26,698 registered today
+            Do you want to be more productive?
           </Text>
         </Box>
       </LinearGradient>

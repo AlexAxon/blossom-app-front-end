@@ -1,7 +1,6 @@
 import axios from "axios"
 import * as SecureStore from "expo-secure-store"
 export const BASE_URL = "https://blossom-app.onrender.com"
-// export const BASE_URL = "https://production-blossom-app.onrender.com/"
 
 const TIME_OUT = 30000
 export const BLOSSOM_TOKEN_NAME = "blossom_user_token"

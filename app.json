@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "blossom-application",
+    "name": "Daily To-Do List",
     "slug": "blossom-application",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,7 +21,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.alexaxon.blossomapplication"
     },
     "web": {
       "favicon": "./assets/favicon.png"

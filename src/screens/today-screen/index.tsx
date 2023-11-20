@@ -2,19 +2,26 @@ import Loader from "@/components/shared/loader"
 import NavigateBack from "@/components/shared/navigate-back"
 import SafeAreaWrapper from "@/components/shared/safe-area-wrapper"
 import Task from "@/components/tasks/task"
-import { fetcher } from "@/services/config"
+import TaskActions from "@/components/tasks/task-actions"
+import { CategoriesStackParamList } from "@/navigation/types"
+import axiosInstance, { fetcher } from "@/services/config"
 import { ITask } from "@/types"
 import { Box, Text } from "@/utils/theme"
-import React from "react"
+import { RouteProp, useRoute } from "@react-navigation/native"
+import React, { useEffect } from "react"
 import { FlatList } from "react-native"
 import useSWR from "swr"
 
+
 const TodayScreen = () => {
+
   const {
     data: tasks,
     isLoading: isLoadingTasks,
     mutate: mutateTasks,
-  } = useSWR<ITask[]>(`tasks/today`, fetcher)
+  } = useSWR<ITask[]>(`tasks/today`, fetcher, {
+    refreshInterval: 1000,
+  })
 
   if (isLoadingTasks || !tasks) {
     return <Loader />
